@@ -1,6 +1,7 @@
-package challenges
+package challenges.twothousandandsix
 
 import java.security.MessageDigest
+
 import scala.collection.immutable.Stream
 
 object J5 extends App {

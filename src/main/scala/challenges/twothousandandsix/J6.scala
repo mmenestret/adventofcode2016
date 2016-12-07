@@ -1,10 +1,10 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 
 object J6 extends App {
 
-  val source = io.readLines("j6input.txt").toList
+  val source = io.readLines("2016/j6input.txt").toList
 
   val newLists = (0 until source.head.length).map {
     index => source.map(_ (index)).mkString

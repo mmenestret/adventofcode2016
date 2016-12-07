@@ -1,4 +1,4 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 

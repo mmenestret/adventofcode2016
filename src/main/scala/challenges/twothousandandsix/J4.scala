@@ -1,4 +1,4 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 
@@ -38,7 +38,7 @@ object J4 extends App {
     orderedByOccurrenceLetters == encryptedRoom.checksum
   }
 
-  val source: Seq[Option[EncryptedRoom]] = io.readLines("j4input.txt").map(parser).toSeq
+  val source: Seq[Option[EncryptedRoom]] = io.readLines("2016/j4input.txt").map(parser).toSeq
   val test = Seq(
     "b-c-d-e-f-g-h-a-b-c-c-a-a-b-987[abcde]",
     "aaaaa-bbb-z-y-x-123[abxyz]",

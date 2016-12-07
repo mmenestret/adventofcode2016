@@ -1,4 +1,4 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 
@@ -21,7 +21,7 @@ object J1 extends App {
     override def toString = s"$direction -> $steps"
   }
 
-  val input = io.readLines("j1input.txt").next()
+  val input = io.readLines("2016/j1input.txt").next()
 
   def parser(s: String): Option[Instruction] = {
 

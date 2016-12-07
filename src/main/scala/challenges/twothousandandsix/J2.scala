@@ -1,4 +1,4 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 
@@ -68,7 +68,7 @@ object J2 extends App {
     }
   }
 
-  val input = io.readLines("j2input.txt").toList
+  val input = io.readLines("2016/j2input.txt").toList
 
   val code1 = input.foldLeft(List[Position]()) {
     (lastPressedButton, instructionsListForNextButton) => {

@@ -1,4 +1,4 @@
-package challenges
+package challenges.twothousandandsix
 
 import utils.io
 
@@ -9,7 +9,7 @@ object J3 extends App {
     override def toString: String = sides.mkString("-")
   }
 
-  val input: List[Array[Int]] = io.readLines("j3input.txt").map{
+  val input: List[Array[Int]] = io.readLines("2016/j3input.txt").map{
     line =>
       line
         .trim
