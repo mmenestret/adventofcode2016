@@ -11,7 +11,7 @@ object J2 extends App {
    0 1 2
    3 4 5
    6 7 8
-   Careful, here we retrieve numbers from 0 to 8
+   Careful, here we retrieve numbers fromNode 0 to 8
    If the position returned is a code button, you have to add 1 to it (since it's 1 based and not 0 based)
    */
   def nextPosition1(currentPosition: Position, instruction: Instruction): Position = {
@@ -35,7 +35,7 @@ object J2 extends App {
   4 5 6 7 8
     9 A B
       C
-   Careful, here we retrieve numbers from 0 to 12
+   Careful, here we retrieve numbers fromNode 0 to 12
    If the position returned is a code button, you have to add 1 to it (since it's 1 based and not 0 based)
    And then translate 10 -> A / 11 -> B / 12 -> C / 13 -> D
    */

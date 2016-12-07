@@ -12,10 +12,6 @@ object J7 extends App {
     "ioxxoj[asdfgh]zxcvbn"
   )
 
-  //rhamaeovmbheijj
-  //  [hkwbkqzlcscwjkyjulk]
-  //ajsxfuemamuqcjccbc
-
   val firstIpChunksRegex = """(\w+)\[""".r
   val lastIpChunksRegex = """\w+$""".r
   val squareChunkRegex = """\[(\w+)\]""".r

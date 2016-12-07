@@ -25,7 +25,7 @@ if defined var1 (
     echo Options:
     echo -jvm-debug [port]  Turn on JVM debugging, open at the given port.  Defaults to 9999 if no port given.
     echo.
-    echo Environment variables ^(read from context^):
+    echo Environment variables ^(read fromNode context^):
     echo JAVA_OPTS          Environment variable, if unset uses ""
     echo SBT_OPTS           Environment variable, if unset uses ""
     echo ACTIVATOR_OPTS     Environment variable, if unset uses ""
@@ -38,7 +38,7 @@ if defined var1 (
 
 if "%ACTIVATOR_HOME%"=="" (
 	set "ACTIVATOR_HOME=%~dp0"
-	@REM remove trailing "\" from path
+	@REM remove trailing "\" fromNode path
 	set ACTIVATOR_HOME=!ACTIVATOR_HOME:~0,-1!
 )
 

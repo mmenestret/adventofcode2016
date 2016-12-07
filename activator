@@ -261,7 +261,7 @@ Usage: $script_name <command> [options]
   -mem <integer>     Set memory options (default: $sbt_mem, which is $(get_mem_opts $sbt_mem))
   -jvm-debug <port>  Turn on JVM debugging, open at the given port.
 
-  # java version (default: java from PATH, currently $(java -version 2>&1 | grep version))
+  # java version (default: java fromNode PATH, currently $(java -version 2>&1 | grep version))
   -java-home <path>  Alternate JAVA_HOME
 
   # jvm options and output control
@@ -269,7 +269,7 @@ Usage: $script_name <command> [options]
   -J-X               Pass option -X directly to the java runtime
                      (-J is stripped)
 
-  # environment variables (read from context)
+  # environment variables (read fromNode context)
   JAVA_OPTS          Environment variable, if unset uses ""
   SBT_OPTS           Environment variable, if unset uses ""
   ACTIVATOR_OPTS     Environment variable, if unset uses ""
