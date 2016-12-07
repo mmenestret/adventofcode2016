@@ -4,13 +4,18 @@ import utils.io
 
 object J7 extends App {
 
-  val source = io.readLines("j7input.txt").toList
+  val source = io.readLines("j7inputseb.txt").toList
   val test = List(
     "abba[mnop]qrst",
     "abcd[bddb]xyyx",
     "aaaa[qwer]tyui",
     "ioxxoj[asdfgh]zxcvbn"
   )
+
+  //rhamaeovmbheijj
+  //  [hkwbkqzlcscwjkyjulk]
+  //ajsxfuemamuqcjccbc
+
   val firstIpChunksRegex = """(\w+)\[""".r
   val lastIpChunksRegex = """\w+$""".r
   val squareChunkRegex = """\[(\w+)\]""".r
@@ -44,6 +49,23 @@ object J7 extends App {
     helper(slided)
   }
 
+  // PART 1
+
+  val ips = source.map(parser)
+
+  val nbOfGoodIp = ips.count {
+    ip => {
+      val abbaInCore = ip.superNetSeq.exists(containsABBA)
+      val abbaInSquares = ip.squareSeq.exists(containsABBA)
+      abbaInCore && !abbaInSquares
+    }
+  }
+
+  println(nbOfGoodIp)
+
+
+  // PART 2
+
   def retrieveABAs(s: String): Option[Seq[String]] = {
     val slided: Seq[String] = s.sliding(3).toList
     val res = slided.filter(chunck => chunck(0) == chunck(2))
@@ -54,16 +76,6 @@ object J7 extends App {
 
   def containsBAB(s: String, aba: String): Boolean = {
     s.sliding(3).toList.contains(abaToBab(aba))
-  }
-
-  val ips = source.map(parser)
-
-  val nbOfGoodIp = ips.count {
-    ip => {
-      val abbaInCore = ip.superNetSeq.exists(containsABBA)
-      val abbaInSquares = ip.squareSeq.exists(containsABBA)
-      abbaInCore && !abbaInSquares
-    }
   }
 
   val ipsWithaba = ips.filter {

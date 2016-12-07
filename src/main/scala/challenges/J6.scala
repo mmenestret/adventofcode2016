@@ -18,6 +18,6 @@ object J6 extends App {
         .toSeq
         .sortBy(-_._2)
         .map(_._1)
-  }.map(_.last).mkString
+  }.map(_.head).mkString
   println(ordered)
 }
