@@ -4,7 +4,7 @@ import utils.io
 
 object J7 extends App {
 
-  val source = io.readLines("j7inputseb.txt").toList
+  val source = io.readLines("2016/j7input.txt").toList
   val test = List(
     "abba[mnop]qrst",
     "abcd[bddb]xyyx",
