@@ -41,5 +41,9 @@ object J9 extends App {
 
   println(graph)
 
-
+//  def visitGraphFrom(g: Graph, n: Node): Int = {
+//    def visit(n: Node, visitedNode: Seq[Node]) = {
+//      g.edges.filter(_.from == n.city)
+//    }
+//  }
 }
